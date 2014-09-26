@@ -1,0 +1,63 @@
+body{
+    margin: 0 0 0 0;
+    background-color: ghostwhite;
+}
+
+header{
+    height: auto;
+    padding: 2% 0 2% 0;
+
+    text-align: center;
+    background-color: #000000;
+
+    color: white;
+    font-family:"Arial", Times, serif;
+    font-weight: bold;
+    line-height: 0.8;
+
+}
+
+header h1{
+    margin: 0 0 0 0;
+}
+
+header#articleHeader{
+    color: #000000;
+    background-color: ghostwhite;
+    font-size: 28pt;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-family:"Times New Roman", Times, serif;
+}
+
+img{
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+
+#byline{
+    font-size: 8pt;
+}
+
+#bodytext{
+
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+articleTitle{
+    font-weight: bold;
+}

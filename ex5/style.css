@@ -1,0 +1,15 @@
+body{
+    font-family:"Georgia", Times, serif;
+}
+
+a{
+    font-family:"Times New Roman", Times, serif;
+}
+
+a:hover{
+    font-family:"Georgia", Times, serif;
+}
+
+.h{
+    font-family:"Helvetica", Times, serif;
+}
