@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title></title>
+<script src="todo.js"></script>
+</head>
+<body>
+
+<h2>To-Do-List</h2>
+<br />
+<button id="saveBtn" onclick="saveToLocalStorage()">Save elements to local storage</button>
+<button id="loadBtn" onclick="loadFromLocalStorage()">Load element from local storage</button>
+<br />
+
+<label for="addInput">
+    Add Todo element:
+</label>
+<input id="addInput" value="test"/>
+<button id="addBtn" onclick="doAdd(document.getElementById('addInput').value)">+</button>
+
+<div id="todo-list"></div>
+
+</body>
+</html>
