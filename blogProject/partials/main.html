@@ -1,0 +1,35 @@
+
+<div class="col-sm-12">
+
+    <!-- list of publications -->
+    <div class="row top-spacing">
+        <div class="col-xs-12">
+            <div ng-controller="BloggCtrl">
+
+                <div class="row">
+                    <div class="col-lg-4" >
+                        <form ng-submit="newBar()">
+                            <input type="text" ng-model="name" size="30"
+                                   placeholder="Navn på ny ØL" />
+                            <input class="btn-primary" type="submit" value="Legg til" />
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h2>Navn på Øl</h2>
+                    </div>
+                </div>
+
+                <!-- Transaction list -->
+                <div class="row" ng-repeat="bar in bars">
+                    <div class="col-lg-3">
+                        {{bar.name}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

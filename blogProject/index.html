@@ -1,0 +1,110 @@
+<!doctype html>
+<!--
+~ Copyright 2014 Studentmediene i Trondheim AS
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~ http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
+
+<html lang="en" ng-app="bloggApp" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title ng-bind="pageTitle ? pageTitle : 'Blogg'">Blogg</title>
+
+    <!-- Enable responsive features -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- build:css css/libs.css -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="libs/components-font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="libs/select2/select2.css">
+    <link rel="stylesheet" href="libs/select2-bootstrap3-css/index.css">
+    <!-- endbuild -->
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="css/app.css"/>
+    <!-- endbuild -->
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" ng-controller="NavbarCtrl">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">Blogg</a>
+        </div>
+
+        <div class="collapse navbar-collapse main-nav-collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active: isActive('/artikler%')}"><a href="#/artikler"><i class="fa fa-money"></i> Artikler</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="hidden-sm" href=""><i class="fa fa-power-off"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div ng-view></div>
+</div>
+
+<!-- Include libraries -->
+<!-- build:js js/libs.js -->
+
+<!-- Include jQuery and Twitter Bootstrap -->
+<script src="libs/jquery/jquery.js"></script>
+
+<!-- Include angular -->
+<script src="libs/angular/angular.js"></script>
+<script src="libs/angular-route/angular-route.js"></script>
+
+<script src="libs/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"></script>
+<!-- Include wysihtml5, the text editor -->
+<script src="libs/wysihtml5/index.js"></script>
+
+<!-- Include select2, the selector -->
+<script src="libs/select2/select2.js"></script>
+<script src="libs/angular-ui-select2/src/select2.js"></script>
+
+<!-- endbuild -->
+
+
+<!-- And the code for our application -->
+<!-- build:js js/main.js -->
+<script src="js/app.js"></script>
+
+<!-- Controllers -->
+<script src="js/controllers/BloggCtrl.js"></script>
+<script src="js/controllers/NavbarCtrl.js"></script>
+
+<!-- Services -->
+<script src="js/services/HTTPInterceptor.js"></script>
+<script src="js/services/TitleChanger.js"></script>
+<script src="js/services/VersionService.js"></script>
+<script src="js/services/MessageModal.js"></script>
+<script src="js/services/TrustedHTMLFilterProvider.js"></script>
+
+<!-- Filters -->
+<!-- Directives -->
+<script src="js/directives/version.js"></script>
+
+<!-- endbuild -->
+
+</body>
+</html>
