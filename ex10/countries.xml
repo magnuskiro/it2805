@@ -1,0 +1,34 @@
+<xml>
+    <countries>
+        <country>
+            <name>Denmark</name>
+            <capital name="Copenhagen" />
+            <population value="5 602 628" />
+            <area value="43 561" />
+        </country>
+        <country>
+            <name>Finland</name>
+            <capital name="Helsinki" />
+            <population value="5 426 674" />
+            <area value="338 534" />
+        </country>
+        <country>
+            <name>Iceland</name>
+            <capital name="Reykjavik" />
+            <population value="321 857" />
+            <area value="103 440" />
+        </country>
+        <country>
+            <name>Norway</name>
+            <capital name="Oslo" />
+            <population value="5 051 275" />
+            <area value="323 787" />
+        </country>
+        <country>
+            <name>Sweden</name>
+            <capital name="Stockholm" />
+            <population value="9 555 893" />
+            <area value="447 420" />
+        </country>
+    </countries>
+</xml>
