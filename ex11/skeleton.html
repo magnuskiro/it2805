@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Graphics and animation using HTML5 Canvas</title>
+        <style>
+            #the-canvas { border: 1px dashed gray }   
+        </style>
+        <script>
+
+            // task 1, square and circle.
+            addEventListener('load', function() {
+                var canvas = document.getElementById('the-canvas');
+                var context = canvas.getContext('2d');
+
+                // square
+                context.beginPath();
+                context.rect(50, 50, 50, 50);
+                context.fillStyle = 'blue';
+                context.fill();
+
+                // circle
+                var xCenter = canvas.width / 2;
+                var yCenter = canvas.height / 2;
+                var r = 70;
+                context.beginPath();
+                context.arc(xCenter, yCenter, r, 0, 2 * Math.PI, false);
+                context.fillStyle = 'red';
+                context.fill();
+
+            });
+
+            // task 2, image loading
+            function drawImg(x,y){
+                var canvas = document.getElementById('the-canvas');
+                var context = canvas.getContext('2d');
+                var imageObj = new Image();
+
+                imageObj.onload = function() {
+                    context.drawImage(imageObj, x, y);
+                };
+                imageObj.src = 'doge.jpg';
+                //console.log(imageObj.width+":"+imageObj.height);
+            }
+            addEventListener('load', function(){
+                drawImg(69, 200);
+            });
+
+            // task 3 move doge
+            var x = 30;
+            var y = 200;
+            var diffX = 2;
+            var diffY = 2;
+            var doge = true;
+            function clearRectByXY(x,y, width, height){
+                var canvas = document.getElementById('the-canvas');
+                var context = canvas.getContext('2d');
+                context.clearRect(x,y, width, height);
+            }
+            setInterval(function(){
+                if(doge){
+                    clearRectByXY(69, 200, 80, 80);
+                    doge = false;
+                }
+                clearRectByXY(x, y, 80, 80);
+                // set new change factor for x.
+                if(x<10){
+                    diffX *= -1;
+                } else if (x>50) {
+                    diffX *=-1;
+                }
+                // set new change factor for y.
+                if(y<200){
+                    diffY *= -1;
+                } else if (y>240) {
+                    diffY *= -1;
+                }
+                //console.log(x+":"+diffX+":"+y+":"+diffY);
+
+                drawImg(x+=diffX, y+=diffY);
+            }, 50);
+        </script>
+    </head>
+    <body>
+        <canvas id="the-canvas" width="500" height="400">   
+            Your browser does not support the &lt;canvas&gt; element.
+        </canvas>
+    </body>
+</html>
