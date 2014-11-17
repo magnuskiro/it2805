@@ -19,23 +19,7 @@
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Home</a>
-            <a class="navbar-brand" href="equipment.html">Equipment and Setup</a>
-            <a class="navbar-brand" href="#">Howto Brew</a>
-            <a class="navbar-brand" href="#">Basic Ingredients</a>
-            <a class="navbar-brand" href="#">Beer History</a>
-            <a class="navbar-brand" href="#">Recipes</a>
-            <a class="navbar-brand" href="#">Resources</a>
-            <a class="navbar-brand" href="#">About</a>
-
-        </div>
+        <div class="navbar-header" id="main-menu"></div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <!-- Secondary menu line.
@@ -75,11 +59,14 @@
 <script src="js/mdLoader.js"></script>
 
 <script>
+    // load menu.
+    $( "#main-menu" ).load( "partials/main-menu.html" );
+
     // define which articles to load.
     loadMD('articles/equipment/pot.md', '#html-md');
 
     // articles in load order.
-    var articles = ["first", "second"];
+    var articles = ["first", "second", ""];
 
     // for articles in this category
         // add new html tag in container.

@@ -5,9 +5,9 @@
 // define markdown converter.
 var converter = new Markdown.Converter();
 // define base location for markdown content / articles.
-//var baseLocation='file:///home/kiro/ntnu/it2805/newProject/';   // works.
-//var baseLocation='https://raw.githubusercontent.com/magnuskiro/it2805/master/project/';
-var baseLocation='http://magnuskiro.no/it2805/project/';
+var baseLocation='file:///home/kiro/ntnu/it2805/project/';   // works.
+// uncomment in prod.
+//var baseLocation='http://magnuskiro.no/it2805/project/';
 
 function loadMD(file, tag){
     var url = baseLocation+file;
@@ -18,7 +18,7 @@ function loadMD(file, tag){
         dataType: 'text',
         success: function(text) {
             // insert html converted markdown into content div.
-            console.log("Loading file:"+url);
+            console.log("Loading file: "+url);
             $(tag).html(converter.makeHtml(text));
         }
 });

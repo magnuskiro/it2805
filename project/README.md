@@ -2,9 +2,6 @@
 
 # TODO
 * find requirements:
-* clean repo
-* deploy project
-* si ifra til jan.
 * fikse struktur
 * fikse innholds henting etc
 * loading categories of articles.
@@ -17,7 +14,7 @@
 a: Form Controls
 b: CSS
 c: XML
-d: Client-side Programming: Javascrip
+d: Client-side Programming: Javascript
 
 free website template, frameworks, free video clips and
 multimedia files obtained from the Web is permitted, but you will need
