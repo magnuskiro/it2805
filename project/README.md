@@ -1,20 +1,19 @@
 # About / readme
 
+todo: Description of blog: why and what.
+
 # TODO
 * find requirements:
-* fikse struktur
-* fikse innholds henting etc
 * loading categories of articles.
 * create content.
+    * articles.
 * alcohol percentage calculator
 * site map. as xml
 * create content.
 
 # Requirements
 a: Form Controls
-b: CSS
 c: XML
-d: Client-side Programming: Javascript
 
 free website template, frameworks, free video clips and
 multimedia files obtained from the Web is permitted, but you will need
