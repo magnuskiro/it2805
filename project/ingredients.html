@@ -25,7 +25,12 @@
 <div class="container">
 
     <div class="col-lg-3">
-        <div class="jumbotron" id="sub-menu"></div>
+        <div class="jumbotron">
+            <h2>Ingredients:</h2>
+            <ul id="sub-menu">
+
+            </ul>
+        </div>
     </div>
     <div class="col-lg-9">
         <div class="jumbotron" id="sub-content"></div>
@@ -54,10 +59,18 @@
     var articles = ["grain", "hops", "yeast", "other"];
 
     // create sub menu.
-
+    var subMenu = document.getElementById("sub-menu");
     // for articles in this category
-        // add new html tag in container.
-        // load article into its own tag. newest article first.
+    for(var art in articles){
+        // add menu element in #sub-menu
+        var menuItem = "<li>content: "+articles[art]+"</li>";
+        subMenu.innerHTML += menuItem;
+
+    }
+
+    function viewSelectedSubPage(name, parentPage){
+        $( "#sub-content" ).load( parentPage+"/"+name+".md" );
+    }
 
 </script>
 

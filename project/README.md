@@ -5,15 +5,13 @@ todo: Description of blog: why and what.
 # TODO
 * find requirements:
 * loading categories of articles.
-* create content.
-    * articles.
+* write content in the articles.
 * alcohol percentage calculator
 * site map. as xml
-* create content.
 
 # Requirements
-a: Form Controls
-c: XML
+* a: Form Controls
+* c: XML
 
 free website template, frameworks, free video clips and
 multimedia files obtained from the Web is permitted, but you will need
