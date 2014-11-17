@@ -28,6 +28,16 @@
 
     </div>
 
+    <div class="jumbotron" id="percentageCalculation">
+        <h2>Calculate alcohol percentage:</h2>
+        <form>
+            OG: <input name="OG" type="text" value="1.07"><br />
+            FG: <input name="FG" type="text" value="1.02"><br />
+            <input type="button" value="Calculate %" onclick="percentageCalculation(this.form)">
+        </form>
+        <p id="alcoholResult"></p>
+    </div>
+
 </div><!-- /.container -->
 
 
@@ -46,12 +56,14 @@
     // define which articles to load.
     loadMD('articles/howto.md', '#html-md');
 
-    // articles in load order.
-    var articles = ["first", "second", ""];
+    // alcohol percentage calculation.
+    function percentageCalculation(form){
+        var OG = form.OG.value;
+        var FG = form.FG.value;
+        var ABV = (OG - FG)*131;
 
-    // for articles in this category
-        // add new html tag in container.
-        // load article into its own tag. newest article first.
+        document.getElementById("alcoholResult").innerHTML = ABV.toString().substr(0,3)+"%";
+    }
 
 </script>
 
