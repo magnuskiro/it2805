@@ -19,7 +19,7 @@ function loadMD(file, tag){
         dataType: 'text',
         success: function(text) {
             // insert html converted markdown into content div.
-            console.log("Loading file: "+url);
+            //console.log("Loading file: "+url);
             $(tag).html(converter.makeHtml(text));
         }
 });
