@@ -1,3 +1,3 @@
-# IPA recipe.
+# Dry Stout
 
 This is beer.

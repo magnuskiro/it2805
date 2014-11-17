@@ -26,7 +26,12 @@
 <div class="container">
 
     <div class="col-lg-3">
-        <div class="jumbotron" id="sub-menu"></div>
+        <div class="jumbotron">
+            <h2>Ingredients:</h2>
+            <ul id="sub-menu">
+
+            </ul>
+        </div>
     </div>
     <div class="col-lg-9">
         <div class="jumbotron" id="sub-content"></div>
@@ -41,7 +46,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="js/pageDownConverter.js"></script>
-<script src="js/mdLoader.js"></script>
+<script src="js/mdLoadUtils.js"></script>
 
 <script>
     // load menu.
@@ -51,11 +56,8 @@
     loadMD('articles/recipes.md', '#sub-content');
 
     // articles in load order.
-    var articles = ["Pale ale", "IPA", "Dry Sout"]; // add others to the list.
-
-    // for articles in this category
-        // add new html tag in container.
-        // load article into its own tag. newest article first.
+    var articles = ["PaleAle", "IPA", "DryStout"]; // add others to the list.
+    createSubMenuItems(articles, 'recipes');
 
 </script>
 

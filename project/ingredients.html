@@ -45,7 +45,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script src="js/pageDownConverter.js"></script>
-<script src="js/mdLoader.js"></script>
+<script src="js/mdLoadUtils.js"></script>
 
 <!-- load dynamic content. -->
 <script>
@@ -57,20 +57,7 @@
 
     // articles in load order.
     var articles = ["grain", "hops", "yeast", "other"];
-
-    // create sub menu.
-    var subMenu = document.getElementById("sub-menu");
-    // for articles in this category
-    for(var art in articles){
-        // add menu element in #sub-menu
-        var menuItem = "<li>content: "+articles[art]+"</li>";
-        subMenu.innerHTML += menuItem;
-
-    }
-
-    function viewSelectedSubPage(name, parentPage){
-        $( "#sub-content" ).load( parentPage+"/"+name+".md" );
-    }
+    createSubMenuItems(articles, 'ingredients');
 
 </script>
 

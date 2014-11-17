@@ -1,3 +1,3 @@
-# IPA recipe.
+# Pale Ale
 
 This is beer.
