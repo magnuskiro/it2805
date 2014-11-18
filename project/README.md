@@ -9,3 +9,4 @@ todo: Description of blog: why and what.
 * bootstrap
 * pageDown
 * jQuery
+* placekitten

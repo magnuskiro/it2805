@@ -5,9 +5,9 @@
 // define markdown converter.
 var converter = new Markdown.Converter();
 // define base location for markdown content / articles.
-//var baseLocation='file:///home/kiro/ntnu/it2805/project/';   // works.
+var baseLocation='file:///home/alex/git/it2805/project/';   // works.
 // uncomment in prod.
-var baseLocation='http://magnuskiro.no/it2805/project/';
+//var baseLocation='http://magnuskiro.no/it2805/project/';
 
 // example: loadMD('articles/ingredients.md', '#sub-content');
 function loadMD(file, tag){

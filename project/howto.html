@@ -24,18 +24,19 @@
 
 <div class="container">
 
-    <div class="jumbotron" id="html-md">
+    <div class="col-lg-3">
+        <div class="jumbotron">
+            <h2>Tools:</h2>
+            <ul id="sub-menu">
 
+            </ul>
+        </div>
     </div>
+    <div class="col-lg-9">
 
-    <div class="jumbotron" id="percentageCalculation">
-        <h2>Calculate alcohol percentage:</h2>
-        <form>
-            OG: <input name="OG" type="text" value="1.07"><br />
-            FG: <input name="FG" type="text" value="1.02"><br />
-            <input type="button" value="Calculate %" onclick="percentageCalculation(this.form)">
-        </form>
-        <p id="alcoholResult"></p>
+        <div class="jumbotron" id="sub-content">
+
+        </div>
     </div>
 
 </div><!-- /.container -->
@@ -54,7 +55,11 @@
     $( "#main-menu" ).load( "partials/main-menu.html" );
 
     // define which articles to load.
-    loadMD('articles/howto.md', '#html-md');
+    loadMD('articles/howto.md', '#sub-content');
+    
+    // articles in load order.
+    var articles = ["Percentage calculator"];
+    createSubMenuItems(articles, 'tools');
 
     // alcohol percentage calculation.
     function percentageCalculation(form){
