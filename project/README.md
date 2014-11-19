@@ -3,7 +3,10 @@
 todo: Description of blog: why and what.
 
 # TODO
-* write content in the articles.
+* Fix content
+* personal css
+* interactive forms, more + sanity checks.
+* add links to references
 
 # Used frameworks and references.
 * bootstrap
