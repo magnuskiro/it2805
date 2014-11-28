@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 </head>
 
 <body>
-            <h2>Calculate alcohol percentage:</h2>
-            <form>
-                Original Gravity: <input name="OG" type="text" value="1.07"><br />
-                Final Gravity: <input name="FG" type="text" value="1.02"><br />
-                <input type="button" value="Calculate %" onclick="percentageCalculation(this.form)">
-            </form>
+            <h2>Find the right amount of ingredients:</h2>
+            <select id="select">
+                 <option value="paleale">Pale Ale</option>
+                 <option value="ipa">IPA</option>
+                 <option value="drystout">Dry Stout</option>
+                 <option value="audi">Audi</option>
+            </select> 
             <p id="alcoholResult"></p>
 
 
@@ -27,6 +28,8 @@
     function percentageCalculation(form){
         var OG = form.OG.value;
         var FG = form.FG.value;
+        var c = document.getElementById("select").value;
+        alert(c);
         if (FG > OG) {
             alert("FG cannot be larger than OG");
         } else {

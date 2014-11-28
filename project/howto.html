@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="../bootstrap/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -58,17 +58,20 @@
     loadMD('articles/howto.md', '#sub-content');
     
     // articles in load order.
-    var articles = ["Percentage calculator"];
+    var articles = ["Percentage calculator", "Mengde"];
     createSubMenuItems(articles, 'tools');
 
     // alcohol percentage calculation.
-    function percentageCalculation(form){
+/*    function percentageCalculation(form){
         var OG = form.OG.value;
         var FG = form.FG.value;
-        var ABV = (OG - FG)*131;
+        if (FG > OG) {
+            alert("FG cannot be larger than OG");
+        }
+        var ABV = (OG - FG);
 
         document.getElementById("alcoholResult").innerHTML = ABV.toString().substr(0,3)+"%";
-    }
+    }*/
 
 </script>
 
