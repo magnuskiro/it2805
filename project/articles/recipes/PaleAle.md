@@ -1,4 +1,7 @@
 # Pale Ale
+<div style="float: right">
+	<img src="img/pale-ale.png"/>
+</div>
 
 ## Ingredients
 * Yeast

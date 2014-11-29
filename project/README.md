@@ -13,3 +13,4 @@ todo: Description of blog: why and what.
 * pageDown
 * jQuery
 * placekitten
+* images borrowed from thompsonbrewing.com

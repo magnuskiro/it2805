@@ -1,17 +1,18 @@
- <!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 <head>
 </head>
 
 <body>
             <h2>Find the right amount of ingredients:</h2>
-            <select id="select">
-                 <option value="paleale">Pale Ale</option>
-                 <option value="ipa">IPA</option>
-                 <option value="drystout">Dry Stout</option>
-                 <option value="audi">Audi</option>
-            </select> 
-            <p id="alcoholResult"></p>
+				<select id="mySelect">
+					 <option value="paleale">Pale Ale</option>
+					 <option value="ipa" selected="selected">IPA</option>
+					 <option value="drystout">Dry Stout</option>
+					 <option value="audi">Audi</option>
+				</select> 
+            <script>console.log("wtf");</script>
+            <div id="recipe"></div>
 
 
 <!-- Bootstrap core JavaScript
@@ -23,23 +24,24 @@
 <script src="js/mdLoadUtils.js"></script>
 
 <script>
-
-    // alcohol percentage calculation.
-    function percentageCalculation(form){
-        var OG = form.OG.value;
-        var FG = form.FG.value;
-        var c = document.getElementById("select").value;
-        alert(c);
-        if (FG > OG) {
-            alert("FG cannot be larger than OG");
-        } else {
-            var ABV = (OG - FG)*131;
-        }
-
-        document.getElementById("alcoholResult").innerHTML = ABV.toString().substr(0,3)+"%";
-    }
-
+	$( "select" )
+	.change(function () {
+	var str = "";
+	$( "select option:selected" ).each(function() {
+	str += $( this ).text();
+	});
+	if (str == 'IPA') {
+		loadMD('articles/recipes/IPA.md', '#recipe');
+	} else if (str == "Pale Ale") {
+		loadMD('articles/recipes/PaleAle.md', '#recipe');
+	} else if (str == "Dry Stout") {
+		loadMD('articles/recipes/DryStout.md', '#recipe');
+	}
+/*	console.log(str);
+	$( "#alcoholResult" ).text( str );
+	loadMD('articles/Home.md', '#html-md'); */
+	})
+	.change();
 </script>
-
 </body>
-</html>  
+</html>
