@@ -5,12 +5,16 @@
 
 <body>
             <h2>Find the right amount of ingredients:</h2>
+            <form>
+				<input type="text" maxlength="40" placeholder="How many litres to brew?" name="name" required/>
 				<select id="mySelect">
-					 <option value="paleale">Pale Ale</option>
-					 <option value="ipa" selected="selected">IPA</option>
-					 <option value="drystout">Dry Stout</option>
-					 <option value="audi">Audi</option>
+					<option value="na" selected="selected">Choose a recipe</option>
+					<option value="paleale">Pale Ale</option>
+					<option value="ipa">IPA</option>
+					<option value="drystout">Dry Stout</option>
+					<option value="audi">Audi</option>
 				</select> 
+			</form>
             <script>console.log("wtf");</script>
             <div id="recipe"></div>
 

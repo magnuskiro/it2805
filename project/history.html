@@ -26,10 +26,11 @@
 
     <div class="col-lg-3">
         <div class="jumbotron">
-            <h2>Ingredients:</h2>
+           <!-- <h2>Ingredients:</h2>
             <ul id="sub-menu">
 
-            </ul>
+            </ul>-->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/The_Brewer_designed_and_engraved_in_the_Sixteenth._Century_by_J_Amman.png" style="max-width: 200px; height: auto"/>
         </div>
     </div>
     <div class="col-lg-9">
@@ -52,10 +53,10 @@
     $( "#main-menu" ).load( "partials/main-menu.html" );
 
     // define which articles to load.
-    loadMD('articles/history.md', '#html-md');
+    loadMD('articles/history.md', '#sub-content');
 
     // articles in load order.
-    var articles = ["first", "second", ""];
+    var articles = ["history"];
 
     // for articles in this category
         // add new html tag in container.

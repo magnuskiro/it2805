@@ -5,9 +5,16 @@
 
 <body>
             <h2>Calculate alcohol percentage:</h2>
+            <p id="warn" style="color: red"></p>
             <form>
-                Original Gravity: <input name="OG" type="text" value="1.07"><br />
-                Final Gravity: <input name="FG" type="text" value="1.02"><br />
+				<label>
+					<span>Original Gravity:</span>
+					<input name="OG" type="text" value="1.07"><br/>
+                </label>
+                <label>
+					<span>Final Gravity:</span>
+					<input name="FG" type="text" value="1.02"><br/>
+                </label>
                 <input type="button" value="Calculate %" onclick="percentageCalculation(this.form)">
             </form>
             <p id="alcoholResult"></p>
@@ -28,12 +35,13 @@
         var OG = form.OG.value;
         var FG = form.FG.value;
         if (FG > OG) {
-            alert("FG cannot be larger than OG");
+			document.getElementById("warn").innerHTML = "FG cannot be larger than OG";
         } else {
             var ABV = (OG - FG)*131;
+            document.getElementById("warn").innerHTML = "";
         }
 
-        document.getElementById("alcoholResult").innerHTML = ABV.toString().substr(0,3)+"%";
+        document.getElementById("alcoholResult").innerHTML = "Your homebrewed beer contains approximately " + ABV.toString().substr(0,3)+"% alcohol";
     }
 
 </script>
