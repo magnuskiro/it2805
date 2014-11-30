@@ -20,45 +20,41 @@
 			<fieldset>
             <label>
                 <span>Litres:</span>
-                <input type="number" maxlength="3" placeholder="10" name="litres" />
+                <input type="number" maxlength="3" placeholder="10" name="oldlitres" />
             </label>
             <label>
                 <span>Grain (kg):</span>
-                <input type="number" maxlength="3" placeholder="0" name="grain" />
+                <input type="number" maxlength="3" placeholder="0" name="oldgrain" />
             </label> 
             <label>
                 <span>Hops (g):</span>
-                <input type="number" maxlength="3" placeholder="0" name="hops"/>
+                <input type="number" maxlength="3" placeholder="0" name="oldhops"/>
             </label>
             <label>
                 <span>Yeast (g):</span>
-                <input type="number" name="phone" placeholder="0" maxlength="15" name="yeast"/>
+                <input type="number" maxlength="3" placeholder="0" name="oldyeast"/>
             </label>
             <hr>
             <h3>I want:</h3>
             <label>
 				<span>Liters:</span>
-				<input type="number" maxlength="3" placeholder="0" name="want" />
+				<input type="number" maxlength="3" placeholder="0" name="newlitres" />
             </label>
             <input type="button" value="Calculate" onClick="amountCalculation(this.form)">
 		</fieldset>
 		<fieldset id="results">
 			<h3>You need:</h3>
-			<label>
-                <span>Litres:</span>
-                <input type="number" maxlength="3" placeholder="10" name="litres" />
-            </label>
             <label>
                 <span>Grain (kg):</span>
-                <input type="number" maxlength="3" placeholder="0" name="grain" />
+                <input type="number" maxlength="3" placeholder="0" name="newgrain" disabled />
             </label> 
             <label>
                 <span>Hops (g):</span>
-                <input type="number" maxlength="3" placeholder="0" name="hops"/>
+                <input type="number" maxlength="3" placeholder="0" name="newhops" disabled />
             </label>
             <label>
                 <span>Yeast (g):</span>
-                <input type="number" name="phone" placeholder="0" maxlength="15" name="yeast"/>
+                <input type="number" maxlength="3" placeholder="0" name="newyeast" disabled />
             </label>
             </fieldset>
 		</form>
@@ -94,17 +90,29 @@
 	.change();
 	
 	function amountCalculation(form){
-		var litres = form.litres.value;
-		var grain = form.grain.value;
+		//var oldLitres = parseInt(form.oldlitres.value);
+		//var newLitres = parseInt(form.newlitres.value);
+		var oldLitres = form.oldlitres.value;
+		var newLitres = form.newlitres.value;
+		if (!parseInt(oldLitres) || !parseInt(newLitres)) {
+			alert("Please enter current liters and wanted liters");
+		} else {
+			var multiplyFactor = form.newlitres.value / form.oldlitres.value;
+			form.newgrain.value = (form.oldgrain.value * multiplyFactor).toFixed(1);
+			form.newyeast.value = (form.oldyeast.value * multiplyFactor).toFixed(1);
+			form.newhops.value = (form.oldhops.value * multiplyFactor).toFixed(1);
+		}
+		
+		//alert(multiplyFactor);
 		form.grain.value = "600";
-		if (FG > OG) {
+		/*if (FG > OG) {
 			document.getElementById("warn").innerHTML = "FG cannot be larger than OG";
 		} else {
 			var ABV = (OG - FG)*131;
 			document.getElementById("warn").innerHTML = "";
 		}
 
-		document.getElementById("alcoholResult").innerHTML = "Your homebrewed beer contains approximately " + ABV.toString().substr(0,3)+"% alcohol";
+		document.getElementById("alcoholResult").innerHTML = "Your homebrewed beer contains approximately " + ABV.toString().substr(0,3)+"% alcohol";*/
     }
 </script>
 </body>
