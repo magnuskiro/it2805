@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../bootstrap/css/custom.css""?>
 <!DOCTYPE faq>
-<urlset>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		Home
+		<loc>
+			http://magnuskiro.no/it2805/project/index.html
+		</loc>
+	</url>
     <url>
+		Equipment
         <loc>
             http://magnuskiro.no/it2805/project/equipment.html
         </loc>
     </url>
     <url>
+		Howto
         <loc>
             http://magnuskiro.no/it2805/project/howto.html
         </loc>
     </url>
     <url>
+		Ingredients
         <loc>
             http://magnuskiro.no/it2805/project/ingredients.html
         </loc>
     </url>
     <url>
+		Recipes
         <loc>
             http://magnuskiro.no/it2805/project/recipes.html
         </loc>
     </url>
     <url>
+		Beer history
         <loc>
             http://magnuskiro.no/it2805/project/history.html
         </loc>
     </url>
     <url>
+		Resources
         <loc>
             http://magnuskiro.no/it2805/project/resources.html
         </loc>
     </url>
     <url>
+		About this site
         <loc>
             http://magnuskiro.no/it2805/project/about.html
         </loc>

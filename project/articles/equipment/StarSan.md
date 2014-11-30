@@ -1,3 +1,4 @@
+[To top](#sub-content "top")
 # StarSan
 This is a sanitizer. It is basically acid dissolved in water.
 

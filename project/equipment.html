@@ -27,12 +27,23 @@
             <div class="jumbotron">
                 <h2>Equipment:</h2>
                 <ul id="sub-menu">
-
+					<a href="#cookingpot">Cooking pot</a></br>
+					<a href="#fermentation">Fermentation container</a></br>
+					<a href="#hydrometer">Hydrometer</a></br>
+					<a href="#ladle">Ladle</a></br>
+					<a href="#spatula">Spatula</a></br>
+					<a href="#starsan">StarSan</a></br>
                 </ul>
             </div>
         </div>
         <div class="col-lg-9">
             <div class="jumbotron" id="sub-content"></div>
+            <div class="jumbotron" id="cookingpot"></div>
+            <div class="jumbotron" id="fermentation"></div>
+            <div class="jumbotron" id="hydrometer"></div>
+            <div class="jumbotron" id="ladle"></div>
+            <div class="jumbotron" id="spatula"></div>
+            <div class="jumbotron" id="starsan"></div>
         </div>
 
     </div><!-- /.container -->
@@ -52,10 +63,16 @@
 
         // define which articles to load.
         loadMD('articles/equipment.md', '#sub-content');
+        loadMD('articles/equipment/Cookingpot.md', '#cookingpot');
+        loadMD('articles/equipment/Fermentationcontainer.md', '#fermentation');
+        loadMD('articles/equipment/Hydrometer.md', '#hydrometer');
+        loadMD('articles/equipment/Ladle.md', '#ladle');
+        loadMD('articles/equipment/Spatula.md', '#spatula');
+        loadMD('articles/equipment/StarSan.md', '#starsan');
         
         // articles in load order.
-        var articles = ["Cooking pot", "Hydrometer", "Ladle", "StarSan", "Fermentation Container"];
-        createSubMenuItems(articles, 'equipment');
+        //var articles = ["Cooking pot", "Hydrometer", "Ladle", "StarSan", "Fermentation Container"];
+        //createSubMenuItems(articles, 'equipment');
 
     </script>
 
