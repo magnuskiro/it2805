@@ -26,17 +26,15 @@
 
     <div class="col-lg-3">
         <div class="jumbotron">
-            <h2>Tools:</h2>
-            <ul id="sub-menu">
-
-            </ul>
+			<img src="http://placekitten.com/g/200/300">
         </div>
     </div>
     <div class="col-lg-9">
-
-        <div class="jumbotron" id="sub-content">
-
-        </div>
+        <div class="jumbotron" id="sub-content"></div>
+		<div class="jumbotron" id="instructions"></div>
+		<div class="jumbotron" id="video"></div>
+        <div class="jumbotron" id="percentage"></div>
+        <div class="jumbotron" id="amounts"></div>
     </div>
 
 </div><!-- /.container -->
@@ -56,10 +54,14 @@
 
     // define which articles to load.
     loadMD('articles/howto.md', '#sub-content');
+    loadMD('articles/tools/Percentage.md', '#percentage');
+    loadMD('articles/tools/Amounts.md', '#amounts');
+    loadMD('articles/Instructions.md', '#instructions');
+    loadMD('articles/Video.md', '#video');
     
     // articles in load order.
-    var articles = ["Percentage calculator", "Mengde"];
-    createSubMenuItems(articles, 'tools');
+    //var articles = ["Percentage calculator", "Mengde"];
+    //createSubMenuItems(articles, 'tools');
 
     // alcohol percentage calculation.
 /*    function percentageCalculation(form){
