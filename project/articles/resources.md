@@ -1,2 +1,6 @@
 # Resources
-her goes other places to look for beer stuffs.
+Useful links
+
+* [Bryggselv.no](http://www.bryggselv.no/ "bryggselv")
+* [Haandbryg.dk](http://www.haandbryg.dk/ "haandbrygg")
+

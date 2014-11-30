@@ -65,9 +65,12 @@ select {
 
 input[type="button"] {
     margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 155px;
     padding: 5px;
     float: left;
     width: 20%;
+    display: block;
 }
 
 span {
@@ -81,3 +84,4 @@ span {
 label {
 	display: block;
 }
+

@@ -4,20 +4,66 @@
 </head>
 
 <body>
-            <h2>Find the right amount of ingredients:</h2>
-            <form>
-				<input type="text" maxlength="40" placeholder="How many litres to brew?" name="name" required/>
-				<select id="mySelect">
-					<option value="na" selected="selected">Choose a recipe</option>
-					<option value="paleale">Pale Ale</option>
-					<option value="ipa">IPA</option>
-					<option value="drystout">Dry Stout</option>
-					<option value="audi">Audi</option>
-				</select> 
-			</form>
-            <script>console.log("wtf");</script>
-            <div id="recipe"></div>
+		<h2>Find the right amount of ingredients:</h2>
+		<!--<form>
+			<input type="text" maxlength="40" placeholder="How many litres to brew?" name="name" required/>
+			<select id="mySelect">
+				<option value="na" selected="selected">Choose a recipe</option>
+				<option value="paleale">Pale Ale</option>
+				<option value="ipa">IPA</option>
+				<option value="drystout">Dry Stout</option>
+			</select> 
+		</form>
+		<div id="recipe"></div>-->
+		<form>
+			<h3>I have:</h3>
+			<fieldset>
+            <label>
+                <span>Litres:</span>
+                <input type="number" maxlength="3" placeholder="10" name="litres" />
+            </label>
+            <label>
+                <span>Grain (kg):</span>
+                <input type="number" maxlength="3" placeholder="0" name="grain" />
+            </label> 
+            <label>
+                <span>Hops (g):</span>
+                <input type="number" maxlength="3" placeholder="0" name="hops"/>
+            </label>
+            <label>
+                <span>Yeast (g):</span>
+                <input type="number" name="phone" placeholder="0" maxlength="15" name="yeast"/>
+            </label>
+            <hr>
+            <h3>I want:</h3>
+            <label>
+				<span>Liters:</span>
+				<input type="number" maxlength="3" placeholder="0" name="want" />
+            </label>
+            <input type="button" value="Calculate" onClick="amountCalculation(this.form)">
+		</fieldset>
+		<fieldset id="results">
+			<h3>You need:</h3>
+			<label>
+                <span>Litres:</span>
+                <input type="number" maxlength="3" placeholder="10" name="litres" />
+            </label>
+            <label>
+                <span>Grain (kg):</span>
+                <input type="number" maxlength="3" placeholder="0" name="grain" />
+            </label> 
+            <label>
+                <span>Hops (g):</span>
+                <input type="number" maxlength="3" placeholder="0" name="hops"/>
+            </label>
+            <label>
+                <span>Yeast (g):</span>
+                <input type="number" name="phone" placeholder="0" maxlength="15" name="yeast"/>
+            </label>
+            </fieldset>
+		</form>
 
+		
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -46,6 +92,20 @@
 	loadMD('articles/Home.md', '#html-md'); */
 	})
 	.change();
+	
+	function amountCalculation(form){
+		var litres = form.litres.value;
+		var grain = form.grain.value;
+		form.grain.value = "600";
+		if (FG > OG) {
+			document.getElementById("warn").innerHTML = "FG cannot be larger than OG";
+		} else {
+			var ABV = (OG - FG)*131;
+			document.getElementById("warn").innerHTML = "";
+		}
+
+		document.getElementById("alcoholResult").innerHTML = "Your homebrewed beer contains approximately " + ABV.toString().substr(0,3)+"% alcohol";
+    }
 </script>
 </body>
 </html>

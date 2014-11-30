@@ -2,6 +2,8 @@
 
 todo: Description of blog: why and what.
 
+[Sitemap](sitemap.xml "haandbrygg")
+
 # TODO
 * Fix content
 * personal css
