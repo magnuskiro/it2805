@@ -1,7 +1,8 @@
-# yeast
+[To top](#sub-content "top")
+# Yeast
 
 <div style="float: right">
-<img src="http://placekitten.com/g/200/300"/>
+<img src="img/yeast.png"/>
 </div>
 Yeast. A fungus that enjoys carbohydrates and produces alcohol. An essential ingredient in any beer, but you want to avoid tasting it.
 
